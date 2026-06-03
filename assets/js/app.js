@@ -171,7 +171,7 @@ $(document).ready(function() {
 
     // Initialize categories in localStorage if not exists
     if (!localStorage.getItem('categories')) {
-        const defaultCategories = ['electronique', 'poulets', 'poissons', 'legumes', 'divers'];
+        const defaultCategories = ['electronique', 'poulets', 'poissons', 'legumes', 'divers', 'maquillage-nouchmina'];
         localStorage.setItem('categories', JSON.stringify(defaultCategories));
     }
 
