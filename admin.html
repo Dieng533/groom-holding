@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Groom Holding</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.jpeg" alt="Groom Holding" class="logo">
+                Groom Holding
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Produits</a></li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin.html">Administration</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="admin-logout-btn">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-primary text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Tableau de Bord</h1>
+            <p class="lead">Gestion de votre boutique</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Stats -->
+    <section class="dashboard-stats py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card stat-primary">
+                        <div class="stat-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="stat-products">0</h3>
+                            <p>Produits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-success">
+                        <div class="stat-icon">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="stat-stock">0</h3>
+                            <p>En Stock</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-warning">
+                        <div class="stat-icon">
+                            <i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="stat-low">0</h3>
+                            <p>Stock Faible</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card stat-info">
+                        <div class="stat-icon">
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="stat-orders">0</h3>
+                            <p>Commandes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Management -->
+    <section class="product-management py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0" id="product-form-title">Ajouter un Produit</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="product-form">
+                                <input type="hidden" id="product-id">
+                                <div class="mb-3">
+                                    <label class="form-label">Nom du produit</label>
+                                    <input type="text" class="form-control" id="product-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Prix (FCFA)</label>
+                                    <input type="number" class="form-control" id="product-price" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Catégorie</label>
+                                    <select class="form-select" id="product-category" required>
+                                        <option value="">Sélectionner</option>
+                                        <option value="electronique">Électronique</option>
+                                        <option value="poulets">Poulets</option>
+                                        <option value="poissons">Poissons</option>
+                                        <option value="legumes">Légumes</option>
+                                        <option value="divers">Divers</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Quantité</label>
+                                    <input type="number" class="form-control" id="product-quantity" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Image du produit</label>
+                                    <input type="file" class="form-control" id="product-image" accept="image/*">
+                                    <div id="image-preview" class="mt-2" style="display: none;">
+                                        <img src="" alt="Aperçu" style="max-width: 100%; max-height: 200px; border-radius: 5px;">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" id="product-description" rows="3"></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary" id="save-product">
+                                        <i class="bi bi-save"></i> Enregistrer
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" id="cancel-edit" style="display: none;">
+                                        <i class="bi bi-x-circle"></i> Annuler
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Liste des Produits</h5>
+                            <div class="d-flex gap-2">
+                                <select class="form-select form-select-sm" id="admin-category-filter" style="width: auto;">
+                                    <option value="">Toutes</option>
+                                    <option value="electronique">Électronique</option>
+                                    <option value="poulets">Poulets</option>
+                                    <option value="poissons">Poissons</option>
+                                    <option value="legumes">Légumes</option>
+                                    <option value="divers">Divers</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Nom</th>
+                                            <th>Catégorie</th>
+                                            <th>Prix</th>
+                                            <th>Stock</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-products-table">
+                                        <!-- Products will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Management -->
+    <section class="category-management py-5">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Gestion des Catégories</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form id="category-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="new-category" placeholder="Nouvelle catégorie" required>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-plus"></i> Ajouter
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="categories-list" class="d-flex flex-wrap gap-2">
+                                <!-- Categories will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2024 Groom Holding. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toast" class="toast" role="alert">
+            <div class="toast-header">
+                <i class="bi bi-check-circle text-success me-2"></i>
+                <strong class="me-auto">Succès</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toast-message">
+                Opération réussie!
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

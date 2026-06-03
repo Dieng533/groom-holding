@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung Galaxy A55",
+        "price": 250000,
+        "category": "electronique",
+        "description": "Smartphone Samsung Galaxy A55 avec écran AMOLED 6.5 pouces, 128GB de stockage, appareil photo 50MP.",
+        "image": "https://via.placeholder.com/400x300/e6007e/ffffff?text=Samsung+Galaxy+A55",
+        "quantity": 15,
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "name": "Poulet Fermier",
+        "price": 5000,
+        "category": "poulets",
+        "description": "Poulet fermier élevé en plein air, de haute qualité.",
+        "image": "https://via.placeholder.com/400x300/28a745/ffffff?text=Poulet+Fermier",
+        "quantity": 50,
+        "stock": 50
+    },
+    {
+        "id": 3,
+        "name": "Thon Frais",
+        "price": 8000,
+        "category": "poissons",
+        "description": "Thon frais de qualité premium, pêché localement.",
+        "image": "https://via.placeholder.com/400x300/17a2b8/ffffff?text=Thon+Frais",
+        "quantity": 30,
+        "stock": 30
+    },
+    {
+        "id": 4,
+        "name": "Tomates Bio",
+        "price": 1500,
+        "category": "legumes",
+        "description": "Tomates biologiques fraîches du jardin.",
+        "image": "https://via.placeholder.com/400x300/ffc107/000000?text=Tomates+Bio",
+        "quantity": 100,
+        "stock": 100
+    },
+    {
+        "id": 5,
+        "name": "iPhone 15 Pro",
+        "price": 650000,
+        "category": "electronique",
+        "description": "iPhone 15 Pro avec puce A17 Pro, appareil photo 48MP, titanium.",
+        "image": "https://via.placeholder.com/400x300/e6007e/ffffff?text=iPhone+15+Pro",
+        "quantity": 8,
+        "stock": 8
+    },
+    {
+        "id": 6,
+        "name": "Poulet de Chair",
+        "price": 4500,
+        "category": "poulets",
+        "description": "Poulet de chair tendre et savoureux.",
+        "image": "https://via.placeholder.com/400x300/28a745/ffffff?text=Poulet+de+Chair",
+        "quantity": 75,
+        "stock": 75
+    },
+    {
+        "id": 7,
+        "name": "Carottes Fraîches",
+        "price": 1200,
+        "category": "legumes",
+        "description": "Carottes fraîches et croquantes.",
+        "image": "https://via.placeholder.com/400x300/ffc107/000000?text=Carottes+Fraîches",
+        "quantity": 80,
+        "stock": 80
+    },
+    {
+        "id": 8,
+        "name": "MacBook Air M3",
+        "price": 850000,
+        "category": "electronique",
+        "description": "MacBook Air avec puce M3, 8GB RAM, 256GB SSD.",
+        "image": "https://via.placeholder.com/400x300/e6007e/ffffff?text=MacBook+Air+M3",
+        "quantity": 5,
+        "stock": 5
+    },
+    {
+        "id": 9,
+        "name": "Maquereau",
+        "price": 3500,
+        "category": "poissons",
+        "description": "Maquereau frais, riche en oméga-3.",
+        "image": "https://via.placeholder.com/400x300/17a2b8/ffffff?text=Maquereau",
+        "quantity": 60,
+        "stock": 60
+    },
+    {
+        "id": 10,
+        "name": "Oignons",
+        "price": 800,
+        "category": "legumes",
+        "description": "Oignons frais de qualité.",
+        "image": "https://via.placeholder.com/400x300/ffc107/000000?text=Oignons",
+        "quantity": 120,
+        "stock": 120
+    },
+    {
+        "id": 11,
+        "name": "Télévision Samsung 55\"",
+        "price": 350000,
+        "category": "electronique",
+        "description": "Télévision Samsung 55 pouces 4K Smart TV.",
+        "image": "https://via.placeholder.com/400x300/e6007e/ffffff?text=TV+Samsung+55",
+        "quantity": 12,
+        "stock": 12
+    },
+    {
+        "id": 12,
+        "name": "Poulet Rôti",
+        "price": 6000,
+        "category": "poulets",
+        "description": "Poulet rôti prêt à consommer.",
+        "image": "https://via.placeholder.com/400x300/28a745/ffffff?text=Poulet+Rôti",
+        "quantity": 25,
+        "stock": 25
+    },
+    {
+        "id": 13,
+        "name": "Sardines Fraîches",
+        "price": 2500,
+        "category": "poissons",
+        "description": "Sardines fraîches, idéales pour grillades.",
+        "image": "https://via.placeholder.com/400x300/17a2b8/ffffff?text=Sardines",
+        "quantity": 100,
+        "stock": 100
+    },
+    {
+        "id": 14,
+        "name": "Aubergines",
+        "price": 1000,
+        "category": "legumes",
+        "description": "Aubergines fraîches et fermes.",
+        "image": "https://via.placeholder.com/400x300/ffc107/000000?text=Aubergines",
+        "quantity": 60,
+        "stock": 60
+    },
+    {
+        "id": 15,
+        "name": "Casque Bluetooth",
+        "price": 25000,
+        "category": "electronique",
+        "description": "Casque sans fil Bluetooth avec réduction de bruit.",
+        "image": "https://via.placeholder.com/400x300/e6007e/ffffff?text=Casque+Bluetooth",
+        "quantity": 30,
+        "stock": 30
+    }
+]
